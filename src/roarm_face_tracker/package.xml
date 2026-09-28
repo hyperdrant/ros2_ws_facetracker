@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!--
+  package.xml 是 ROS 2 包的"身份证"：
+  - 包名 / 版本 / 维护者 / 许可证
+  - 依赖项（rosdep 会根据这里安装依赖，colcon 会根据这里决定编译顺序）
+  - build_type：ament_python 表示这是一个纯 Python 包
+-->
+<package format="3">
+  <name>roarm_face_tracker</name>
+  <version>0.1.0</version>
+  <description>RoArm-M2 串口驱动 + 摄像头 + 人脸跟踪（让机械臂末端摄像头跟随画面中最大的人脸）</description>
+  <maintainer email="sas573920@gmail.com">hyperdrant</maintainer>
+  <license>GPL-3.0</license>
+
+  <!-- 运行时依赖：代码里 import 了哪些 ROS 包 / Python 库，就写在这里 -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>rqt_image_view</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

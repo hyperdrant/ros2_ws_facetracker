@@ -1,0 +1,4 @@
+[console_scripts]
+camera = roarm_face_tracker.camera_node:main
+face_tracker = roarm_face_tracker.face_tracker_node:main
+roarm_driver = roarm_face_tracker.roarm_driver_node:main

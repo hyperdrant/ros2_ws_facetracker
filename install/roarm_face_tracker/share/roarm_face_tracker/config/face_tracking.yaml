@@ -1,0 +1,63 @@
+# ROS 2 参数文件
+# 格式：
+#   <节点名>:
+#     ros__parameters:     <- 固定写法，注意是两个下划线
+#       参数名: 值
+# 节点名前面的 "/**/" 是通配符，表示"任意命名空间下的这个节点"，
+# 这样无论节点放在哪个命名空间下（例如 /roarm/roarm_driver），都能读到这份参数。
+# 修改这个文件后需要重新 colcon build 才会生效（本机 setuptools 太新，不能用 --symlink-install）。
+
+/**/roarm_driver:
+  ros__parameters:
+    baudrate: 115200
+    feedback_rate: 20.0     # Hz
+    # 舵机速度，单位 步/秒（4096 步 = 360°，1 步 ≈ 0.088°）。0 = 最快速度（太冲，会甩出画面）
+    # 500 步/秒 ≈ 44°/秒。跟不上人就调大，还是冲过头就调小
+    move_speed: 500
+    move_acc: 10
+    move_init_on_start: false
+
+/**/camera:
+  ros__parameters:
+    # 机械臂上的罗技 C310（= /dev/video2）。/dev/video0 是笔记本自带摄像头
+    device: /dev/v4l/by-id/usb-046d_081b_E5C3AF60-video-index0
+    width: 640
+    height: 480
+    fps: 30.0
+    frame_id: camera_link
+    # 摄像头横着绑在机械臂上，把画面顺时针转 270°（= 逆时针 90°）转正。
+    # 真机验证：90 时画面是倒的，270 才正。
+    rotate: 270
+
+/**/face_tracker:
+  ros__parameters:
+    pan_joint: base
+    tilt_joint: elbow       # 也可以试试 hand 或 shoulder，取决于摄像头装在哪一节上
+    pan_sign: -1.0          # 左右跑反了就改成 1.0
+    tilt_sign: 1.0          # 上下跑反了就改成 -1.0
+    # 比例增益：每次控制转过"角度误差"的多少比例（0~1）
+    # 调大 = 反应快但容易冲过头/来回晃；调小 = 稳但跟得慢
+    kp_pan: 0.4
+    kp_tilt: 0.4
+    # 视场角是"转正后"画面的：摄像头横装，所以水平/垂直与摄像头原始规格对调
+    hfov_deg: 45.0
+    vfov_deg: 60.0
+    deadband: 0.05
+    max_step: 0.1           # rad，每次最多转约 5.7°
+    pan_min: -1.57
+    pan_max: 1.57
+    tilt_min: 0.3
+    tilt_max: 2.6
+    control_rate: 10.0      # Hz，每秒最多发多少次指令；机械臂需要时间执行，发太快没有意义
+    smoothing: 0.5
+    lost_timeout: 0.5       # 秒，超过这么久没检测到人脸才算跟丢
+    publish_debug_image: true
+
+    # ---- 人脸检测器 ----
+    detector: yolo          # yolo（准，需 GPU/PyTorch）或 haar（快，但容易漏检）
+    yolo_model: ""          # 留空 = 包内自带的 models/yolov12n-face.pt
+    yolo_conf: 0.4          # 置信度阈值：调低更灵敏但可能误检，调高更严格
+    yolo_device: "0"        # "0" = GPU，"cpu" = CPU（约 40ms/帧，也能用）
+    # 以下两个只对 haar 有效
+    detect_width: 320
+    min_face_size: 30

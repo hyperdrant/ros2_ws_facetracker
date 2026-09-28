@@ -1,0 +1,36 @@
+[0.548s] Invoking command in '/home/hyperdrant/rm_new/ros2_ws/src/roarm_face_tracker': PYTHONPATH=/home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_face_tracker build --build-base /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build install --record /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/install.log --single-version-externally-managed install_data
+[0.769s] running egg_info
+[0.784s] writing ../../build/roarm_face_tracker/roarm_face_tracker.egg-info/PKG-INFO
+[0.784s] writing dependency_links to ../../build/roarm_face_tracker/roarm_face_tracker.egg-info/dependency_links.txt
+[0.784s] writing entry points to ../../build/roarm_face_tracker/roarm_face_tracker.egg-info/entry_points.txt
+[0.784s] writing requirements to ../../build/roarm_face_tracker/roarm_face_tracker.egg-info/requires.txt
+[0.784s] writing top-level names to ../../build/roarm_face_tracker/roarm_face_tracker.egg-info/top_level.txt
+[0.813s] reading manifest file '../../build/roarm_face_tracker/roarm_face_tracker.egg-info/SOURCES.txt'
+[0.814s] writing manifest file '../../build/roarm_face_tracker/roarm_face_tracker.egg-info/SOURCES.txt'
+[0.814s] running build
+[0.814s] running build_py
+[0.814s] copying roarm_face_tracker/roarm_driver_node.py -> /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker
+[0.815s] copying roarm_face_tracker/face_tracker_node.py -> /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker
+[0.815s] copying roarm_face_tracker/__init__.py -> /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker
+[0.815s] copying roarm_face_tracker/camera_node.py -> /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker
+[0.815s] copying roarm_face_tracker/image_utils.py -> /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker
+[0.815s] running install
+[0.818s] running install_lib
+[0.832s] copying /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker/roarm_driver_node.py -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker
+[0.832s] copying /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build/lib/roarm_face_tracker/face_tracker_node.py -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker
+[0.833s] byte-compiling /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker/roarm_driver_node.py to roarm_driver_node.cpython-310.pyc
+[0.834s] byte-compiling /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker/face_tracker_node.py to face_tracker_node.cpython-310.pyc
+[0.835s] running install_data
+[0.836s] copying resource/roarm_face_tracker -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/share/ament_index/resource_index/packages
+[0.836s] copying package.xml -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/share/roarm_face_tracker
+[0.836s] copying launch/face_tracking.launch.py -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/share/roarm_face_tracker/launch
+[0.836s] copying config/face_tracking.yaml -> /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/share/roarm_face_tracker/config
+[0.836s] running install_egg_info
+[0.851s] removing '/home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker-0.1.0-py3.10.egg-info' (and everything under it)
+[0.851s] Copying ../../build/roarm_face_tracker/roarm_face_tracker.egg-info to /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages/roarm_face_tracker-0.1.0-py3.10.egg-info
+[0.852s] running install_scripts
+[0.882s] Installing camera script to /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/roarm_face_tracker
+[0.883s] Installing face_tracker script to /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/roarm_face_tracker
+[0.883s] Installing roarm_driver script to /home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/roarm_face_tracker
+[0.883s] writing list of installed files to '/home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/install.log'
+[0.900s] Invoked command in '/home/hyperdrant/rm_new/ros2_ws/src/roarm_face_tracker' returned '0': PYTHONPATH=/home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hyperdrant/rm_new/ros2_ws/install/roarm_face_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_face_tracker build --build-base /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/build install --record /home/hyperdrant/rm_new/ros2_ws/build/roarm_face_tracker/install.log --single-version-externally-managed install_data

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: roarm_face_tracker
+Version: 0.1.0
+Summary: RoArm-M2 face tracking with ROS 2
+Maintainer: hyperdrant
+Maintainer-email: sas573920@gmail.com
+License: GPL-3.0
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary
